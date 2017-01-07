@@ -13,8 +13,8 @@
     <script>
       var canvas = document.getElementById("canvas");
       var ctx = canvas.getContext("2d");
-      var WIDTH = 600;
-      var HEIGHT = 600;
+      var WIDTH = .8 * window.innerWidth;
+      var HEIGHT = .8 * window.innerHeight;
       var RADIUS = 10;
 
       var socket = io();
@@ -31,7 +31,7 @@
         ctx.fillStyle = "white";
         ctx.strokeStyle = "black";
         rect(0, 0, WIDTH, HEIGHT);
-        ctx.fillStyle = "purple";
+        ctx.fillStyle = "blue";
         for (i=0;i<data.clientIDs.length;i++){
           var id = data.clientIDs[i];
           console.log(id);

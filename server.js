@@ -61,7 +61,7 @@ io.on('connection', (socket) => {
     data.positions[id+'x'] = x;
     data.positions[id+'y'] = y;
   });
-  
+
   socket.on('disconnect',function(){
     if(data.clientIDs.includes(String(socket.id))){
         delete data.positions[String(socket.id)+'x'];
@@ -92,4 +92,4 @@ io.on('connection', (socket) => {
 // }
 setInterval(function () {
     io.emit('tick', data);
-    },50);
+  },50);
